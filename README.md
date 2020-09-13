@@ -8,7 +8,7 @@ This action sets timezone in your runner's locale based on its OS.
 | --------------- | ------------------------------------------------------------- | ---------- | ------------- |
 | timezoneLinux   | Timezone you want to set if your runner is running on Linux   | false      | `UTC`         |
 | timezoneWindows | Timezone you want to set if your runner is running on Windows | false      | `UTC`         |
-| timezoneMacos   | Timezone you want to set if your runner is running on MacOS   | false      | `UTC`         |
+| timezoneMacos   | Timezone you want to set if your runner is running on MacOS   | false      | `GMT`         |
 
 ## Example usage
 

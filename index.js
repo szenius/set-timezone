@@ -7,30 +7,20 @@ const execCommand = async (file, args) => {
 
 const setTimezone = async () => {
   try {
-    const timezoneWindows = core.getInput("timezoneWindows");
-    const timezoneLinux = core.getInput("timezoneLinux");
-    const timezoneMacos = core.getInput("timezoneMacos");
-
     const platform = process.platform;
-    console.log(`Configuring for platform ${platform}`);
 
     switch (platform) {
       case "linux":
-        await execCommand("sudo", [
-          "timedatectl",
-          "set-timezone",
-          timezoneLinux,
-        ]);
+        const timezone = core.getInput("timezoneLinux");
+        await execCommand("sudo", ["timedatectl", "set-timezone", timezone]);
         break;
       case "darwin":
-        await execCommand("sudo", [
-          "systemsetup",
-          "-settimezone",
-          timezoneMacos,
-        ]);
+        const timezone = core.getInput("timezoneMacos");
+        await execCommand("sudo", ["systemsetup", "-settimezone", timezone]);
         break;
       case "win32":
-        await execCommand("tzutil", ["/s", timezoneWindows]);
+        const timezone = core.getInput("timezoneWindows");
+        await execCommand("tzutil", ["/s", timezone]);
         break;
       default:
         core.setFailed(

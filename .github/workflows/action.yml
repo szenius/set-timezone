@@ -16,7 +16,7 @@ jobs:
         uses: ./
         with:
           timezoneLinux: "UTC"
-          timezoneMacos: "UTC"
+          timezoneMacos: "GMT"
           timezoneWindows: "UTC"
       - name: Set Timezone to +8 (With input)
         uses: ./
