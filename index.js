@@ -7,6 +7,7 @@ try {
   const timezoneMacos = core.getInput("timezoneMacos");
 
   const platform = process.platform;
+  console.log(`Configuring for platform ${platform}`);
 
   switch (platform) {
     case "linux":
