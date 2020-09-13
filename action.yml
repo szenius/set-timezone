@@ -1,0 +1,25 @@
+name: 'Set Timezone'
+description: 'Sets timezone in your locale'
+author: 'szenius'
+branding:
+  icon: 'clock'
+  color: 'yellow'
+inputs:
+  timezoneWindows:
+    description: 'Desired timezone for Windows'
+    required: false
+    default: 'UTC'
+  timezoneLinux:
+    description: 'Desired timezone for Linux'
+    required: false
+    default: 'UTC'
+  timezoneMacos:
+    description: 'Desired timezone for MacOS'
+    required: false
+    default: 'UTC'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'node12'
+  main: 'index.js'

@@ -1,0 +1,24 @@
+on: [push]
+
+jobs:
+  test_action:
+    name: Test Action
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macOS-latest, windows-latest]
+    steps:
+      - name: Set Timezone to +0 (No input)
+        uses: ./
+      - name: Set Timezone to +0 (With input)
+        uses: ./
+        with:
+          timezoneLinux: "UTC"
+          timezoneMacos: "UTC"
+          timezoneWindows: "UTC"
+      - name: Set Timezone to +8 (With input)
+        uses: ./
+        with:
+          timezoneLinux: "Asia/Singapore"
+          timezoneMacos: "Asia/Singapore"
+          timezoneWindows: "Singapore Standard Time"

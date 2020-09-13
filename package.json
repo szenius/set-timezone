@@ -1,0 +1,23 @@
+{
+  "name": "set-timezone",
+  "version": "1.0.0",
+  "description": "Set timezone",
+  "main": "index.js",
+  "scripts": {
+    "run": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szenius/set-timezone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szenius/set-timezone/issues"
+  },
+  "homepage": "https://github.com/szenius/set-timezone#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.5",
+    "execa": "^4.0.3"
+  }
+}
