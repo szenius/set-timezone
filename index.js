@@ -13,15 +13,18 @@ try {
       execa("sudo", ["timedatectl", "set-timezone", timezoneLinux]).stdout.pipe(
         process.stdout
       );
+      break;
     case "darwin":
       execa("sudo", ["systemsetup", "-settimezone", timezoneMacos]).stdout.pipe(
         process.stdout
       );
+      break;
     case "win32":
       execa("tzutil", ["/s", timezoneWindows]).stdout.pipe(process.stdout);
+      break;
     default:
       core.setFailed(
-        "Platform not supported; Only linux, darwin or win32 are supported now"
+        `Platform ${platform} not supported; Only linux, darwin or win32 are supported now`
       );
   }
 } catch (error) {
