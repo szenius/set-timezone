@@ -4,7 +4,8 @@
   "description": "Set timezone",
   "main": "index.js",
   "scripts": {
-    "run": "node index.js"
+    "run": "node index.js",
+    "build": "ncc build index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +20,8 @@
   "dependencies": {
     "@actions/core": "^1.2.5",
     "execa": "^4.0.3"
+  },
+  "devDependencies": {
+    "@zeit/ncc": "^0.22.3"
   }
 }
