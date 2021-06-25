@@ -12,7 +12,7 @@ const setTimezone = async () => {
     switch (platform) {
       case "linux":
         const timezone = core.getInput("timezoneLinux");
-        await execCommand("sudo", ["timedatectl", "set-timezone", timezone]);
+        await execCommand("sudo", ["timedatectl", "set-timezone", timezone, "--adjust-system-clock --no-ask-password"]);
         break;
       case "darwin":
         const timezone = core.getInput("timezoneMacos");
@@ -33,3 +33,4 @@ const setTimezone = async () => {
 };
 
 setTimezone();
+
