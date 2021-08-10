@@ -1,0 +1,14 @@
+on: [push, pull_request]
+
+jobs:
+  test_windows_gmt8:
+    runs-on: windows-latest
+    name: Test GMT +8
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set Timezone to +8 (With input)
+        uses: ./
+        with:
+          timezoneWindows: "Singapore Standard Time"
+      - run: npm run test
