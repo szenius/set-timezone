@@ -11,4 +11,5 @@ jobs:
         uses: ./
         with:
           timezoneMacos: "Asia/Singapore"
+      - run: npm i
       - run: npm run test

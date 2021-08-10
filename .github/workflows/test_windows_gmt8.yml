@@ -11,4 +11,5 @@ jobs:
         uses: ./
         with:
           timezoneWindows: "Singapore Standard Time"
+      - run: npm i
       - run: npm run test
