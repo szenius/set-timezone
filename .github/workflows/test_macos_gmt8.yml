@@ -1,9 +1,19 @@
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  page_build:
+  release:
+    types:
+      - created
 
 jobs:
   test_macos_gmt8:
     runs-on: macos-latest
-    name: Test GMT +8
+    name: Test GMT +8 on MacOS
     steps:
       - name: Checkout
         uses: actions/checkout@v2

@@ -1,9 +1,22 @@
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  page_build:
+  release:
+    types:
+      - created
 
 jobs:
   test_linux_gmt8:
-    runs-on: ubuntu-20.04
-    name: Test GMT +8
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, ubuntu-20.04]
+    name: Test GMT +8 on Ubuntu
     steps:
       - name: Checkout
         uses: actions/checkout@v2
