@@ -1,3 +1,5 @@
+name: Test Windows
+
 on:
   push:
     branches:
@@ -16,7 +18,7 @@ jobs:
     name: Test GMT +8 on Windows
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Set Timezone to +8 (With input)
         uses: ./
         with:
