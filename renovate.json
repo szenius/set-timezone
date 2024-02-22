@@ -1,0 +1,83 @@
+{
+  "extends": ["config:base"],
+  "timezone": "Europe/Paris",
+  "schedule": ["on sunday"],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "automerge": true
+  },
+  "packageRules": [
+    {
+      "packageNames": ["node"],
+      "enabled": false
+    },
+    {
+      "matchManagers": ["nvm"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["docker"],
+      "matchPackagePatterns": ["mysql", "node"],
+      "enabled": false
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["patch"],
+      "groupName": "all patch dependencies",
+      "groupSlug": "all-patch",
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": [
+        "@ngneat/falso",
+        "algoliasearch",
+        "aws*sdk*",
+        "date-fns",
+        "handlebars",
+        "joi",
+        "lambda-returns",
+        "lint-staged",
+        "log4js",
+        "lodash",
+        "mime-types",
+        "node-mailjet",
+        "puppeteer*",
+        "sequelize",
+        "stripe",
+        "superagent",
+        "winston"
+      ],
+      "matchUpdateTypes": ["minor"],
+      "matchDepTypes": ["dependencies"],
+      "groupName": "all minor corporate and trusted dependencies",
+      "groupSlug": "all-minor-trusted",
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": ["*"],
+      "matchUpdateTypes": ["minor"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "all minor devDependencies",
+      "groupSlug": "all-minor",
+      "automerge": true
+    },
+    {
+      "matchPackagePatterns": [
+        "@commitlint/*",
+        "@types",
+        "commitizen",
+        "cz-conventional-changelog",
+        "eslint*",
+        "husky",
+        "jest",
+        "lint-staged",
+        "prettier"
+      ],
+      "matchUpdateTypes": ["major"],
+      "matchDepTypes": ["devDependencies"],
+      "groupName": "all major trusted devDependencies",
+      "groupSlug": "all-major-trusted-devDeps",
+      "automerge": true
+    }
+  ]
+}
