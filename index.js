@@ -18,11 +18,11 @@ const setTimezone = async () => {
         await execCommand('sudo', [
           'systemsetup',
           '-settimezone',
-          core.getInput('timezoneMacos'),
+          getInput('timezoneMacos'),
         ]);
         break;
       case 'win32':
-        await execCommand('tzutil', ['/s', core.getInput('timezoneWindows')]);
+        await execCommand('tzutil', ['/s', getInput('timezoneWindows')]);
         break;
       default:
         setFailed(

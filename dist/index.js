@@ -27213,7 +27213,7 @@ var __webpack_exports__ = {};
 ;// CONCATENATED MODULE: external "process"
 const external_process_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("process");
 // EXTERNAL MODULE: ./node_modules/@actions/core/lib/core.js
-var lib_core = __nccwpck_require__(2186);
+var core = __nccwpck_require__(2186);
 ;// CONCATENATED MODULE: external "node:buffer"
 const external_node_buffer_namespaceObject = __WEBPACK_EXTERNAL_createRequire(import.meta.url)("node:buffer");
 ;// CONCATENATED MODULE: external "node:path"
@@ -29398,26 +29398,26 @@ const setTimezone = async () => {
         await execCommand('sudo', [
           'timedatectl',
           'set-timezone',
-          (0,lib_core.getInput)('timezoneLinux'),
+          (0,core.getInput)('timezoneLinux'),
         ]);
         break;
       case 'darwin':
         await execCommand('sudo', [
           'systemsetup',
           '-settimezone',
-          core.getInput('timezoneMacos'),
+          (0,core.getInput)('timezoneMacos'),
         ]);
         break;
       case 'win32':
-        await execCommand('tzutil', ['/s', core.getInput('timezoneWindows')]);
+        await execCommand('tzutil', ['/s', (0,core.getInput)('timezoneWindows')]);
         break;
       default:
-        (0,lib_core.setFailed)(
+        (0,core.setFailed)(
           `Platform ${external_process_namespaceObject.platform} not supported; Only linux, darwin or win32 are supported now`
         );
     }
   } catch (error) {
-    (0,lib_core.setFailed)(error.message);
+    (0,core.setFailed)(error.message);
   }
 };
 
