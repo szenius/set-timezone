@@ -2,10 +2,10 @@ name: Test Linux
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   page_build:
   release:
     types:
@@ -15,7 +15,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, ubuntu-20.04]
+        os: [ ubuntu-latest, ubuntu-20.04 ]
     name: Test GMT +8 on Ubuntu
     steps:
       - name: Checkout

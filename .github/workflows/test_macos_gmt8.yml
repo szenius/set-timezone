@@ -2,10 +2,10 @@ name: Test macOS
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   page_build:
   release:
     types:
