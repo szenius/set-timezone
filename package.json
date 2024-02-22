@@ -1,5 +1,5 @@
 {
-  "name": "set-timezone",
+  "name": "setup-timezone",
   "version": "1.0",
   "description": "Set timezone",
   "main": "index.js",
@@ -17,14 +17,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MathRobin/set-timezone.git"
+    "url": "git+https://github.com/MathRobin/setup-timezone.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MathRobin/set-timezone/issues"
+    "url": "https://github.com/MathRobin/setup-timezone/issues"
   },
-  "homepage": "https://github.com/MathRobin/set-timezone#readme",
+  "homepage": "https://github.com/MathRobin/setup-timezone#readme",
   "dependencies": {
     "@actions/core": "1.10.1",
     "execa": "8.0.1"
