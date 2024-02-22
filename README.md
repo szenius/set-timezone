@@ -2,7 +2,7 @@
 
 Maintained fork from https://github.com/szenius/set-timezone (Abandoned project)
 
-![Test Action](https://github.com/MathRobin/timezone-action/workflows/.github/workflows/action.yml/badge.svg)
+[![Test all Platforms](https://github.com/MathRobin/timezone-action/actions/workflows/test_run_action.yml/badge.svg)](https://github.com/MathRobin/timezone-action/actions/workflows/test_run_action.yml)
 
 This action sets timezone in your runner's locale based on its OS.
 
