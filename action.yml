@@ -1,4 +1,4 @@
-name: 'Set Timezone'
+name: 'Setup Timezone'
 description: 'Sets timezone in your locale'
 author: 'MathRobin'
 branding:
