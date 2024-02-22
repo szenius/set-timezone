@@ -1,22 +1,22 @@
-name: "Set Timezone"
-description: "Sets timezone in your locale"
-author: "szenius"
+name: 'Set Timezone'
+description: 'Sets timezone in your locale'
+author: 'MathRobin'
 branding:
-  icon: "clock"
-  color: "yellow"
+  icon: 'clock'
+  color: 'orange'
 inputs:
   timezoneLinux:
-    description: "Desired timezone for Linux"
+    description: 'Desired timezone for Linux'
     required: false
-    default: "UTC"
+    default: 'UTC'
   timezoneMacos:
-    description: "Desired timezone for MacOS"
+    description: 'Desired timezone for MacOS'
     required: false
-    default: "GMT"
+    default: 'GMT'
   timezoneWindows:
-    description: "Desired timezone for Windows"
+    description: 'Desired timezone for Windows'
     required: false
-    default: "UTC"
+    default: 'UTC'
 runs:
-  using: "node16"
-  main: "dist/index.js"
+  using: 'node20'
+  main: 'dist/index.js'

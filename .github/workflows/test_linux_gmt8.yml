@@ -1,3 +1,4 @@
+name: Test Linux
 on:
   push:
     branches:
@@ -9,7 +10,6 @@ on:
   release:
     types:
       - created
-
 jobs:
   test_linux_gmt8:
     runs-on: ${{ matrix.os }}
@@ -19,10 +19,10 @@ jobs:
     name: Test GMT +8 on Ubuntu
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Set Timezone to +8 (With input)
         uses: ./
         with:
-          timezoneLinux: "Asia/Singapore"
-      - run: npm i
-      - run: npm run test
+          timezoneLinux: 'Asia/Singapore'
+      - run: yarn install
+      - run: yarn test
