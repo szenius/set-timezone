@@ -15,7 +15,7 @@ This action sets timezone in your runner's locale based on its OS.
 ## Example usage
 
 ```yaml
-uses: szenius/set-timezone@v2
+uses: szenius/set-timezone@v2.0
 with:
   timezoneLinux: "Asia/Singapore"
   timezoneMacos: "Asia/Singapore"
