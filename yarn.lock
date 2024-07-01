@@ -3141,18 +3141,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"timezone-action@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "timezone-action@workspace:."
-  dependencies:
-    "@actions/core": "npm:1.10.1"
-    "@vercel/ncc": "npm:0.38.1"
-    execa: "npm:8.0.1"
-    jest: "npm:29.7.0"
-    prettier: "npm:3.2.5"
-  languageName: unknown
-  linkType: soft
-
 "shebang-command@npm:^2.0.0":
   version: 2.0.0
   resolution: "shebang-command@npm:2.0.0"
@@ -3410,6 +3398,18 @@ __metadata:
   checksum: 10c0/019d33d81adff3f9f1bfcff18125fb2d3c65564f437d9be539270ee74b994986abb8260c7c2ce90e8f30162178b09dbbce33c6389273afac4f36069c48521f57
   languageName: node
   linkType: hard
+
+"timezone-action@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "timezone-action@workspace:."
+  dependencies:
+    "@actions/core": "npm:1.10.1"
+    "@vercel/ncc": "npm:0.38.1"
+    execa: "npm:8.0.1"
+    jest: "npm:29.7.0"
+    prettier: "npm:3.2.5"
+  languageName: unknown
+  linkType: soft
 
 "tmpl@npm:1.0.5":
   version: 1.0.5

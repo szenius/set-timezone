@@ -1,4 +1,4 @@
-import { platform, stdout } from 'process';
+import { platform, stdout } from 'node:process';
 import { getInput, setFailed } from '@actions/core';
 import { execa } from 'execa';
 
